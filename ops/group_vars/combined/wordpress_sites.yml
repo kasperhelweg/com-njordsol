@@ -5,7 +5,7 @@ wordpress_sites:
         redirects:
           - www.njordsol.dk
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@bitbucket.org:molamil/622-com-danish-tm.git # replace with your Git repo URL
+    repo: git@github.com:kasperhelweg/com-njordsol.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:
@@ -25,7 +25,7 @@ wordpress_sites:
         redirects:
           - www.njordsol.staging.spellio.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@bitbucket.org:molamil/622-com-danish-tm.git # replace with your Git repo URL
+    repo: git@github.com:kasperhelweg/com-njordsol.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: staging 
     multisite:
