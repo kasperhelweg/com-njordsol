@@ -40,6 +40,8 @@
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/woocommerce": "2.6.11",
+    "wpackagist-plugin/woocommerce-gateway-paypal-express-checkout": "1.1.2",
+    "wpackagist-plugin/woocommerce-gateway-stripe": "3.0.6",
     "wpackagist-theme/storefront": "2.1.6"
   },
   "require-dev": {
