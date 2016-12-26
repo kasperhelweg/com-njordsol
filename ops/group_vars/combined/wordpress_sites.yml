@@ -1,9 +1,9 @@
 wordpress_sites:
   production:
     site_hosts:
-      - canonical: njordsol.dk
+      - canonical: www.njordsol.dk
         redirects:
-          - www.njordsol.dk
+          - njordsol.dk
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:kasperhelweg/com-njordsol.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
@@ -21,9 +21,9 @@ wordpress_sites:
 
   staging:
     site_hosts:
-      - canonical: njordsol.staging.spellio.com
+      - canonical: njordsol.staging.spell.io
         redirects:
-          - www.njordsol.staging.spellio.com
+          - www.njordsol.staging.spell.io
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:kasperhelweg/com-njordsol.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
