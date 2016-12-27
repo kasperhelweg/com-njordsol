@@ -1,0 +1,10 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.site-title {
+    text-transform: lowercase;
+}
