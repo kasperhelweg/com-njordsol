@@ -3,6 +3,20 @@
 namespace App;
 
 /**
+ * Determine which pages should NOT display the sidebar
+ * @link https://codex.wordpress.org/Conditional_Tags
+ */
+add_filter('sage/display_sidebar', function ($display) {
+    // The sidebar will NOT be displayed if ANY of the following return true
+    return $display ? !in_array(true, [
+        true
+        // is_404(),
+        // is_front_page(),
+        // is_page_template('templates/template-custom.php'),
+    ]) : $display;
+});
+
+/**
  * Add <body> classes
  */
 add_filter('body_class', function (array $classes) {
