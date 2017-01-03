@@ -4,20 +4,33 @@
 # Uncomment the lines below and replace `sage` with your theme folder
 #
 ---
- - name: Run yarn
-   command: yarn
+# - name: Run yarn
+#   command: yarn
+#   connection: local
+#   args:
+#     chdir: "{{ project.local_path }}/web/app/themes/njordsol"
+
+
+ - name: Run npm
+   command: npm install
    connection: local
    args:
      chdir: "{{ project.local_path }}/web/app/themes/njordsol"
 
-# - name: Run bower install
-#   command: bower install
+ - name: Run bower install
+   command: bower install
+   connection: local
+   args:
+     chdir: "{{ project.local_path }}/web/app/themes/njordsol"
+
+# - name: Run webpack
+#   command: yarn run build:production
 #   connection: local
 #   args:
-#     chdir: "{{ project.local_path }}/web/app/themes/sage"
-#
- - name: Run webpack
-   command: yarn run build:production
+#     chdir: "{{ project.local_path }}/web/app/themes/njordsol"
+
+ - name: Run gulp
+   command: gulp --production 
    connection: local
    args:
      chdir: "{{ project.local_path }}/web/app/themes/njordsol"
