@@ -1,16 +1,4 @@
 <?php
-
-/**
- * Do not edit anything in this file unless you know what you're doing
- */
-
-/**
- * Require Composer autoloader if installed on it's own
- */
-if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
-    require_once $composer;
-}
-
 /**
  * Sage includes
  *
@@ -18,25 +6,24 @@ if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
  * Add or remove files to the array as needed. Supports child theme overrides.
  *
  * Please note that missing files will produce a fatal error.
+ *
+ * @link https://github.com/roots/sage/pull/1042
  */
-array_map(function ($file) {
-    if (!locate_template("src/{$file}.php", true, true)) {
-        trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
-    }
-}, ['helpers', 'setup', 'filters', 'admin']);
+$sage_includes = [
+  'lib/assets.php',     // Scripts and stylesheets
+  'lib/extras.php',     // Custom functions
+  'lib/setup.php',      // Theme setup
+  'lib/titles.php',     // Page titles
+  'lib/wrapper.php',    // Theme wrapper class
+  'lib/customizer.php', // Theme customizer
+  'lib/woo.php'         // Woo
+];
 
+foreach ($sage_includes as $file) {
+  if (!$filepath = locate_template($file)) {
+    trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
+  }
 
-add_action( 'init', 'custom_remove_footer_credit', 10 );
-function custom_remove_footer_credit () {
-    remove_action( 'storefront_footer', 'storefront_credit', 20 );
-    add_action( 'storefront_footer', 'custom_storefront_credit', 20 );
+  require_once $filepath;
 }
-
-
-function custom_storefront_credit() {
-    ?>
-    <div class="site-info">
-    &copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?>
-    </div><!-- .site-info -->
-<?php
-               }
+unset($file, $filepath);
