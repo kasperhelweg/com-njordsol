@@ -26,3 +26,8 @@ function delay_remove() {
     remove_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
     remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 }
+
+add_action( 'init', 'jk_remove_storefront_header_search' );
+function jk_remove_storefront_header_search() {
+    remove_action( 'storefront_header', 'storefront_product_search', 	40 );
+}

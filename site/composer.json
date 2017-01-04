@@ -42,7 +42,8 @@
     "wpackagist-plugin/woocommerce": "2.6.11",
     "wpackagist-plugin/woocommerce-gateway-paypal-express-checkout": "1.1.2",
     "wpackagist-plugin/woocommerce-gateway-stripe": "3.0.6",
-    "wpackagist-theme/storefront": "2.1.6"
+    "wpackagist-theme/storefront": "2.1.6",
+    "wpackagist-plugin/storefront-title-toggle": "1.2.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
