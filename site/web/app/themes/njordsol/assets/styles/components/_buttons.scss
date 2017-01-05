@@ -8,3 +8,33 @@
         color: #ffffff;
     }
 }
+
+.site-header-cart {
+    .widget_shopping_cart {
+        a {
+            &.button {
+                background-color: yellow;
+            }
+
+            &.button {
+                &.checkout {
+                    background-color: #2c2d33;
+                    border-color: #2c2d33;
+                }
+            }
+
+        }
+    }
+}
+
+a:focus,
+.button:focus,
+.button.alt:focus,
+.button.added_to_cart:focus,
+.button.wc-forward:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+		outline: 0;
+}
