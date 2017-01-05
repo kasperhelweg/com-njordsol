@@ -27,10 +27,10 @@
           // JavaScript to be fired on all pages, after page specific JS is fired
           $(window).scroll(function() {
 			        if ($(this).scrollTop() > (251.31 - 77)) {
-				          jQuery('#masthead').addClass('sticky');
+				          jQuery('#page').addClass('sticky-nav');
 			        }
 			        else {
-				          jQuery('#masthead').removeClass("sticky");
+				          jQuery('#page').removeClass("sticky-nav");
 			        }
         	});
       }

@@ -1,39 +1,64 @@
 .storefront-primary-navigation {
-    
-}
-.site-header {
-    position: fixed;
-    width: 100%;
-
-    .site-branding {
-        font-size: 1.1em;
-
-        .site-title {
-            text-transform: uppercase;
-        }
-    }
 }
 
-@media screen and (min-width: 768px) {
+#page {
     .site-header {
-        position: relative;
+        position: fixed;
+        width: 100%;
 
         .site-branding {
-            font-size: 1.3em;
-            text-align: center;
-
-            width: 100%;
-            margin: 0 auto 2.617924em;
-            float: none;
+            font-size: 1.1em;
 
             .site-title {
                 text-transform: uppercase;
             }
         }
-        &.sticky {
-            position: fixed;
-            top: -184.537px;
-            width: 100%;
+    }
+    .site-content {
+        margin-top: 162.803px;
+    }
+    .woocommerce-breadcrumb {
+        margin-top: -69.143px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #page {
+        .site-header {
+            position: relative;
+
+            .site-branding {
+                font-size: 1.3em;
+                text-align: center;
+
+                width: 100%;
+                margin: 0 auto 2.617924em;
+                float: none;
+
+                .site-title {
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .site-content {
+            margin-top: 0;
+        }
+        .woocommerce-breadcrumb {
+            margin-top: 0px;
+        }
+        &.sticky-nav {
+            .site-header {
+                position: fixed;
+                top: -184.537px;
+                width: 100%;
+            }
+            .site-content {
+                margin-top: 320.083px;
+            }
+            .woocommerce-breadcrumb {
+                margin-top: -69.143px;
+            }
         }
     }
+
 }
