@@ -31,3 +31,9 @@ add_action( 'init', 'jk_remove_storefront_header_search' );
 function jk_remove_storefront_header_search() {
     remove_action( 'storefront_header', 'storefront_product_search', 	40 );
 }
+
+add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
+function wcs_woo_remove_reviews_tab($tabs) {
+    unset($tabs['reviews']);
+    return $tabs;
+}
