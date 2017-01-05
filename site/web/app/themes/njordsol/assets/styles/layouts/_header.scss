@@ -1,0 +1,26 @@
+.site-header {
+    .site-branding {
+        font-size: 1.1em;
+
+        .site-title {
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .site-header {
+        .site-branding {
+            font-size: 1.3em;
+            text-align: center;
+
+            width: 100%;
+            margin: 0 auto 2.617924em;
+            float: none;
+
+            .site-title {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
