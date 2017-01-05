@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c0be6459d7fe3536fdd2f8269300e5f1",
-    "content-hash": "23455fa69f26a10d12420dcfc609414e",
+    "hash": "d27740825e38066a08fb922b39e4b125",
+    "content-hash": "2adae029c38e75341a06b0e0d0a2d68f",
     "packages": [
         {
             "name": "composer/installers",
@@ -235,6 +235,51 @@
             "time": "2016-05-08 17:14:32"
         },
         {
+            "name": "roots/soil",
+            "version": "3.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/soil.git",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/soil/zipball/5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2016-08-30 18:15:45"
+        },
+        {
             "name": "roots/wp-password-bcrypt",
             "version": "1.0.0",
             "source": {
@@ -352,7 +397,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/storefront-title-toggle.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -372,7 +417,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/woocommerce.2.6.11.zip",
-                "reference": null,
+                "reference": "tags/2.6.11",
                 "shasum": null
             },
             "require": {
@@ -392,7 +437,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-paypal-express-checkout.1.1.2.zip",
-                "reference": null,
+                "reference": "tags/1.1.2",
                 "shasum": null
             },
             "require": {
@@ -412,7 +457,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.3.0.6.zip",
-                "reference": null,
+                "reference": "tags/3.0.6",
                 "shasum": null
             },
             "require": {
@@ -432,7 +477,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/theme/storefront.2.1.6.zip",
-                "reference": null,
+                "reference": "2.1.6",
                 "shasum": null
             },
             "require": {

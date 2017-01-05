@@ -17,11 +17,22 @@
   var Sage = {
     // All pages
     'common': {
-      init: function() {
+        init: function() {
+
         // JavaScript to be fired on all pages
       },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
+        finalize: function() {
+//            console.log($('#masthead').height() + $('#masthead').css('padding-top') );
+//            console.log($('#masthead').outerHeight())
+          // JavaScript to be fired on all pages, after page specific JS is fired
+          $(window).scroll(function() {
+			        if ($(this).scrollTop() > (251.31 - 77)) {
+				          jQuery('#masthead').addClass('sticky');
+			        }
+			        else {
+				          jQuery('#masthead').removeClass("sticky");
+			        }
+        	});
       }
     },
     // Home page

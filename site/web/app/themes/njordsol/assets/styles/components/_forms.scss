@@ -17,14 +17,22 @@
 */
 
 select {
-    border-radius: 0;
-    background-color: #fff;
-    border: 1px solid #e6e6e6;
+    font-size: 1rem;
+    color: #777;
+    padding: 5px 8px;
+    height: 50px;
     width: 100%;
-    padding: 12.5px 12px;
-    margin-bottom: 24px;
-    color: #000;
-    -webkit-transition: 0.25s;
-    -moz-transition: 0.25s;
-    transition: 0.25s;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: #fff;
 }
+
+.storefront-sorting {
+    display: none;
+}
+
+.woocommerce-message {
+    margin-top: 0 !important;
+}
+

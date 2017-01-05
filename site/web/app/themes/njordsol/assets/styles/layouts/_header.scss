@@ -1,4 +1,10 @@
+.storefront-primary-navigation {
+    
+}
 .site-header {
+    position: fixed;
+    width: 100%;
+
     .site-branding {
         font-size: 1.1em;
 
@@ -10,6 +16,8 @@
 
 @media screen and (min-width: 768px) {
     .site-header {
+        position: relative;
+
         .site-branding {
             font-size: 1.3em;
             text-align: center;
@@ -21,6 +29,11 @@
             .site-title {
                 text-transform: uppercase;
             }
+        }
+        &.sticky {
+            position: fixed;
+            top: -184.537px;
+            width: 100%;
         }
     }
 }
