@@ -18,10 +18,14 @@
         }
     }
     .site-content {
-        margin-top: 162.803px;
-    }
-    .woocommerce-breadcrumb {
-        margin-top: -69.143px;
+        margin-top: 250px;
+        .woocommerce-breadcrumb {
+            position: fixed;
+            z-index: 1;
+
+            width: 100%;
+            margin-top: -137.25px;
+        }
     }
 }
 
@@ -45,23 +49,41 @@
         }
         .site-content {
             margin-top: 0;
-        }
-        .woocommerce-breadcrumb {
-            margin-top: 0px;
+            .woocommerce-breadcrumb {
+                position: relative;
+                z-index: 1;
+
+                width: auto;
+                margin-top: 0;
+            }
         }
         &.sticky-nav {
             .site-header {
                 position: fixed;
-                top: -184.537px;
+                top: -204.31px;
                 width: 100%;
             }
             .site-content {
-                margin-top: 320.083px;
+                margin-top: 402.241px;
             }
             .woocommerce-breadcrumb {
-                margin-top: -69.143px;
+                position: fixed;
+                z-index: 1;
+
+                width: auto;
+                margin-top: -325.241px;
             }
         }
     }
-
+    body {
+        &.home {
+            #page {
+                &.sticky-nav {
+                    .site-content {
+                        margin-top: 342.94px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -26,7 +26,7 @@
 //            console.log($('#masthead').outerHeight())
           // JavaScript to be fired on all pages, after page specific JS is fired
           $(window).scroll(function() {
-			        if ($(this).scrollTop() > (251.31 - 77)) {
+			        if ($(this).scrollTop() > (204.31)) {
 				          jQuery('#page').addClass('sticky-nav');
 			        }
 			        else {
