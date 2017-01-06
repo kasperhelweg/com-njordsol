@@ -7,10 +7,13 @@
         width: 100%;
 
         .site-branding {
-            font-size: 1.1em;
-
             .site-title {
-                text-transform: uppercase;
+                font-size: 3.1em;
+                a {
+                    font-family: neue-font;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                }
             }
         }
     }
