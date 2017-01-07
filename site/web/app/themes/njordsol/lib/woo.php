@@ -1,5 +1,11 @@
 <?php
 
+add_action( 'wp_enqueue_scripts', 'njordsol_enqueue_scripts' );
+function njordsol_enqueue_scripts() {
+    wp_deregister_script( 'wc-add-to-cart-variation' );
+    wp_register_script('wc-add-to-cart-variation', get_bloginfo( 'stylesheet_directory' ). '/dist/scripts/vendor/add-to-cart-variation.min.js' , array( 'jquery', 'wp-util' ), WC_VERSION, TRUE);
+}
+
 add_action( 'init', 'custom_remove_footer_credit', 10 );
 function custom_remove_footer_credit () {
     remove_action( 'storefront_footer', 'storefront_credit', 20 );

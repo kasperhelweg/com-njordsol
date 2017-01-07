@@ -19,6 +19,11 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "vendor/add-to-cart-variation.min.js": {
+      "files": [
+        "scripts/vendor/add-to-cart-variation.js"
+      ]
     }
   },
   "config": {
