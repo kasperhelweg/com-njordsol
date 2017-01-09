@@ -22,8 +22,6 @@
         // JavaScript to be fired on all pages
       },
         finalize: function() {
-//            console.log($('#masthead').height() + $('#masthead').css('padding-top') );
-//            console.log($('#masthead').outerHeight())
           // JavaScript to be fired on all pages, after page specific JS is fired
           $(window).scroll(function() {
 			        if ($(this).scrollTop() > (204.31)) {
