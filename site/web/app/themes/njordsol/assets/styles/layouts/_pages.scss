@@ -3,3 +3,8 @@
     visibility:hidden;
 }
 
+#page {
+    &.site {
+        min-height: 700px;
+    }
+}
