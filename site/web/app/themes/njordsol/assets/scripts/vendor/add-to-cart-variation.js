@@ -20,6 +20,10 @@
 		    this.$resetVariations.unbind( 'click' );
 		    this.$attributeFields.unbind( 'change ' );
 
+        // Begin custom implementation
+        this.$leaderSelect = this.$attributeFields[0];
+        console.log(this.$leaderSelect);
+
 		    // Methods.
 		    this.getChosenAttributes = this.getChosenAttributes.bind( this );
 		    this.findMatchingVariations = this.findMatchingVariations.bind( this );
@@ -303,8 +307,8 @@
 	  VariationForm.prototype.onUpdateAttributes = function( event ) {
         console.log("SECOND");
 		    var form              = event.data.variationForm,
-			  attributes        = form.getChosenAttributes(),
-			  currentAttributes = attributes.data;
+			      attributes        = form.getChosenAttributes(),
+			      currentAttributes = attributes.data;
 
 		    if ( form.useAjax ) {
 			      return;
@@ -312,13 +316,13 @@
 		    // Loop through selects and disable/enable options based on selections.
 		    form.$attributeFields.each( function( index, el ) {
 			      var current_attr_select     = $( el ),
-				        current_attr_name       = current_attr_select.data( 'attribute_name' ) || current_attr_select.attr( 'name' ),
-				        show_option_none        = $( el ).data( 'show_option_none' ),
-				        option_gt_filter        = ':gt(0)',
-				        attached_options_count  = 0,
-				        new_attr_select         = $( '<select/>' ),
-				        selected_attr_val       = current_attr_select.val() || '',
-				        selected_attr_val_valid = true;
+				    current_attr_name       = current_attr_select.data( 'attribute_name' ) || current_attr_select.attr( 'name' ),
+				    show_option_none        = $( el ).data( 'show_option_none' ),
+				    option_gt_filter        = ':gt(0)',
+				    attached_options_count  = 0,
+				    new_attr_select         = $( '<select/>' ),
+				    selected_attr_val       = current_attr_select.val() || '',
+				    selected_attr_val_valid = true;
 
 			      // Reference options set at first.
 			      if ( ! current_attr_select.data( 'attribute_html' ) ) {
@@ -536,7 +540,7 @@
 	   */
 	  $.fn.wc_variations_image_update = function( variation ) {
 		    var $form             = this,
-			  $product          = $form.closest('.product'),
+			      $product          = $form.closest('.product'),
 			  $product_img      = $product.find( 'div.images img:eq(0)' ),
 			  $product_link     = $product.find( 'div.images a.zoom:eq(0)' );
 
