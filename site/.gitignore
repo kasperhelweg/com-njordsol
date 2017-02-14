@@ -1,6 +1,7 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
+!web/app/plugins/kool-multistep-product-configurator/
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
@@ -33,3 +34,6 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+# Stuff
+.DS_Store

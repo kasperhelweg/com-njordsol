@@ -36,3 +36,15 @@ select {
     margin-top: 0 !important;
 }
 
+table {
+    &.variations {
+        tr:nth-of-type(n+2) {
+            display: none;
+        }
+    }
+    &.variations {
+        tr {
+        }
+    }
+}
+

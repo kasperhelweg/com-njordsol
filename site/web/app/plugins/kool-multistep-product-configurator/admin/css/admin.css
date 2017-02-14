@@ -1,0 +1,38 @@
+/*
+ * Styling for the admin
+ *
+*/
+
+/**************************
+**** ATTRIBUTES FORM *******
+**************************/
+
+.kmspc-upload-field {
+	display: inline-table;
+	vertical-align: middle;
+	width: 95%;
+}
+
+.kmspc-upload-field > * {
+	display: table-cell !important;
+	margin: 0 !important;
+	width: 10%;
+}
+
+.kmspc-upload-field > input {
+	width: 100%;
+	line-height: 21px;
+}
+
+
+/* Helper */
+.kmspc-clearfix:before, .kmspc-clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.kmspc-clearfix:after { clear: both; }
+.kmspc-clearfix { zoom: 1; }
+.kmspc-help {font-size: 11px; cursor: help;}
+.kmspc-children-floated > div {float: left;padding-right: 20px;}
+.kmspc-children-floated > div:last-child {padding: 0;}
+.kmspc-clear {clear: both;}
+.kmspc-hidden {display: none !important;}
+.kmspc-left {float: left;}
+.kmspc-right {float: right;}
