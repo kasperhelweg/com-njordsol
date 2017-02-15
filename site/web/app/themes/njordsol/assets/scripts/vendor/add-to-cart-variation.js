@@ -132,26 +132,26 @@
             for(var i = currentIndex; i < form.$attributeFields.length; i++) {
                 var c = i;
                 var n = c + 1;
-                if($(form.$attributeFields[i]).val() && $(form.$attributeFields[c]).children().eq(0).val() == '') {
+                if($(form.$attributeFields[i]).val() && $(form.$attributeFields[c]).children().eq(0).val() === '') {
                     $("table.variations tr:eq(" + (n) + ")").show();
                 }
             }
         } else {
-            for(var i = currentIndex + 1; i < form.$attributeFields.length; i++) {
+            for(var j = currentIndex + 1; j < form.$attributeFields.length; j++) {
                 // Select
-                var s = $("table.variations tr:eq(" + (i) + ") .value select");
+                var s = $("table.variations tr:eq(" + (j) + ") .value select");
 
                 if(s.is(":visible") && !s.val()) {
-                    var tr = "table.variations tr:eq(" + (i) + ")";
+                    var tr = "table.variations tr:eq(" + (j) + ")";
                     h.push(tr);
                 }
             }
 
-            for(var j in h) {
-                $(h[j]).wrapInner('<div style="display: block;" />')
-                $(h[j]).find('div').addClass("YO").fadeOut(1000);
+            for(var k in h) {
+                $(h[k]).wrapInner('<div style="display: block;" />');
+                $(h[k]).find('div').addClass("YO").fadeOut(1000);
             }
-        };
+        }
     };
 
 
@@ -465,7 +465,8 @@
             console.log("CHECK");
             console.log(checkAttributes);
 			      var variations = form.findMatchingVariations( form.variationData, checkAttributes );
-            console.log(variations)
+            console.log(variations);
+
             if(variations.length > 0) {
 			          // Loop through variations.
 			          for ( var num in variations ) {
